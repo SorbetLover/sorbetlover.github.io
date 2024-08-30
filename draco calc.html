@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Muito Foda</title>
+    <style>
+        #draco {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="draco" src="https://i.pinimg.com/736x/65/4f/4a/654f4a12ecd8a3d1a1ff1542eb7b9cde.jpg" alt="DRACOOOOOOOOOOOOOOOOO" width="600" height="600"/>
+    
+    <h1>Calculadora Muito Foda</h1>
+    
+    <input type="number" id="num1" name="num1"><br><br>
+    <select name="operation" id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select> <br><br>
+    <input type="number" id="num2" name="num2"><br><br>
+    <input type="button" value="Calcular" onclick="calculate();"><br><br>
+    
+    <div id="result"></div>
+    
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const operation = document.getElementById("operation").value;
+            let result;
+
+            switch(operation) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = "Operação inválida";
+            }
+
+            document.getElementById("result").innerText = result + ' 🤫';
+        }
+    </script>
+</body>
+</html>
