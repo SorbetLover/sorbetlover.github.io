@@ -13,6 +13,9 @@
 
     <body style="background-color: #222222">
         <h1 id="txt1">texto foda</h1>
+        <input id="b1" type="button" value="links" onclick="openLink(1)">
+        <br>
+        <br>
         <input id="b1" type="button" value="draco calc" onclick="openLink(0)">
     </body>
 
@@ -23,6 +26,10 @@
             switch(arg){
                 case 0:
                 window.location.href = "draco calc.html";
+                break
+                case 1:
+                window.location.href = "links.html";
+                break
             }
         }
     </script>
